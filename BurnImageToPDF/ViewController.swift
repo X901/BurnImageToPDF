@@ -39,10 +39,12 @@ class ViewController: UIViewController {
          let height = signatureImage.size.height
          let x : CGFloat = 0
          let y : CGFloat = 0
+        
+        guard let currentPageIndex = pdfView.currentPage?.pageRef?.pageNumber else { return print("currentPageIndex is nil") }
 
         guard let cgPDFDucomunt = pdfView.document?.documentRef else { return print("cgPDFDucomunt is nil") }
 
-        guard let pdfData = BurnImageOnPdf.drawOnPDF(cgPDFDucomunt: cgPDFDucomunt, signatureImage: signatureImage, pageIndex: 0, x: x, y: y, width: width, height: height)
+        guard let pdfData = BurnImageOnPdf.drawOnPDF(cgPDFDucomunt: cgPDFDucomunt, signatureImage: signatureImage, pageIndex: currentPageIndex - 1, x: x, y: y, width: width, height: height)
         else { return print("pdfData is nil") }
         
         guard let document = PDFDocument(data: pdfData) else { return print("document is nil") }
