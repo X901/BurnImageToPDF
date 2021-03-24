@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 
         guard let cgPDFDucomunt = pdfView.document?.documentRef else { return print("cgPDFDucomunt is nil") }
 
-        guard let pdfData = BurnImageOnPdf.drawOnPDF(cgPDFDucomunt: cgPDFDucomunt, signatureImage: signatureImage, pageIndex: currentPageIndex - 1, x: x, y: y, width: width, height: height)
+        guard let pdfData = BurnImageOnPdf.drawOnPDF(cgPDFDucomunt: cgPDFDucomunt, signatureImage: signatureImage, pageIndex: currentPageIndex, x: x, y: y, width: width, height: height)
         else { return print("pdfData is nil") }
         
         guard let document = PDFDocument(data: pdfData) else { return print("document is nil") }

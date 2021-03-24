@@ -19,16 +19,16 @@
         
         UIGraphicsBeginPDFPageWithInfo(pageFrame!, nil)
 
-        let ctx = UIGraphicsGetCurrentContext()
+        guard let ctx = UIGraphicsGetCurrentContext() else {return nil}
    
-        ctx!.saveGState()
-        ctx!.scaleBy(x: 1, y: -1)
-        ctx!.translateBy(x: 0, y: -pageFrame!.size.height)
+        ctx.saveGState()
+        ctx.scaleBy(x: 1, y: -1)
+        ctx.translateBy(x: 0, y: -pageFrame!.size.height)
         
-        ctx!.drawPDFPage(page!)
-        ctx!.restoreGState()
+        ctx.drawPDFPage(page!)
+        ctx.restoreGState()
         
-        if index == pageIndex + 1 {
+        if index == pageIndex {
             let image = signatureImage
             var newRectImage: CGRect?
             
