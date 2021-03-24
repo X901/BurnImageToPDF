@@ -1,4 +1,4 @@
-# BurnImageToPDF
+# Burn Image On PDF
 
 This is project show how to burn image into PDF (Save As Flatten)
 
@@ -12,7 +12,13 @@ This is project show how to burn image into PDF (Save As Flatten)
 - After image burned to PDF you will get the PDF Data you can save it to user device or just display it as on the example.
 
 
+#### Signature image
+![signature](https://user-images.githubusercontent.com/16876982/112380885-fbd9ce00-8cfa-11eb-85a4-3c7a4a772be6.png)
 
+#### PDF
+[sample.pdf](https://github.com/X901/BurnImageToPDF/files/6200365/sample.pdf)
 
+#### Result
+![Simulator Screen Shot - iPad Pro (9 7-inch) - 2021-03-24 at 23 22 41](https://user-images.githubusercontent.com/16876982/112381029-288de580-8cfb-11eb-9714-5fe02ee8ab96.png)
 
 
